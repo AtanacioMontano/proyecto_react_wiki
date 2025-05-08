@@ -57,3 +57,5 @@ vite.config.js
 * Tailwind
 * Zustand (estado global)
 * React Query (estado local)
+
+<a href="https://deepwiki.com/AtanacioMontano/proyecto_react_wiki"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
