@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+:root {
+    
+      --text-xs: 0.6375rem;     /* 0.75rem * 0.85 */
+      --text-sm: 0.74375rem;    /* 0.875rem * 0.85 */
+      --text-base: 0.85rem;     /* 1rem * 0.85 */
+      --text-lg: 0.95625rem;    /* 1.125rem * 0.85 */
+      --text-xl: 1.0625rem;     /* 1.25rem * 0.85 */
+      --text-2xl: 1.275rem;     /* 1.5rem * 0.85 */
+      --text-3xl: 1.59375rem;   /* 1.875rem * 0.85 */
+      --text-4xl: 1.9125rem;    /* 2.25rem * 0.85 */
+      --text-5xl: 2.55rem;      /* 3rem * 0.85 */
+      --text-6xl: 3.1875rem;    /* 3.75rem * 0.85 */
+      --text-7xl: 3.825rem;     /* 4.5rem * 0.85 */
+      --text-8xl: 5.1rem;       /* 6rem * 0.85 */
+      --text-9xl: 6.8rem;       /* 8rem * 0.85 */
+
+    /* Variables de Validación */
+    --validation-color-error: #e74c3c;
+    --validation-color-success: #2ecc71;
+    --validation-color-warning: #f39c12;
+    --validation-color-info: #2f80ed;
+
+    --validation-text-error: #721c24;
+    --validation-text-success: #155724;
+    --validation-text-warning: #85640a;
+    --validation-text-info: #85640a;
+
+    --validation-border-error: #f5c6cb;
+    --validation-border-success: #c3e6cb;
+    --validation-border-warning: #ffeeba;
+    --validation-border-info: #badeff;
+}
+
+@layer utilities {
+    
+    /* Theme BENLAR */
+    .theme-benlar {
+        --color-primary: #1D24CA;
+        --color-secondary: #201658;
+        --color-third: #c0c9fe;
+    
+        --color-primary-hover: var(--color-secondary);
+
+        --color-gradient-from: #FFFFFF;
+        --color-gradient-via: #E1E1E1;
+        --color-gradient-to: var(--color-third);
+
+        --bg-hero-image-url: url('images/jpg/bg-hero.jpg');
+        --bg-hero-options: top center no-repeat;
+        --bg-hero-size: contain;
+
+        --bg-logo-srvnui-url: url('images/svg/logos/srvnui-color-positive.svg');
+        --bg-logo-srvnui-options: left center no-repeat;
+        --bg-logo-srvnui-size: contain;
+
+        --bg-logo-benlar-url: url('images/svg/logos/benlar-grid-color-positive.svg');
+        --bg-logo-benlar-options: left center no-repeat;
+        --bg-logo-benlar-size: contain;
+
+        --bg-logo-cliente-url: url('images/svg/logos/benlar-grid-color-positive.svg');
+        --bg-logo-cliente-options: left center no-repeat;
+        --bg-logo-cliente-size: contain;
+
+        --color-info: #2f80ed;
+        --color-warning: #f39c12;
+        --color-success: #2ecc71;
+        --color-error: #e74c3c;
+    }
+
+    /* Theme BICEVIDA */
+    .theme-bicevida {
+        --color-primary: #003A70;
+        --color-secondary: #82BC00;
+        --color-third: #82BC00;
+    
+        --color-primary-hover: var(--color-secondary);
+
+        --color-gradient-from: #FFFFFF;
+        --color-gradient-via: #E1E1E1;
+        --color-gradient-to: var(--color-third);
+
+        --bg-hero-image-url: url('images/jpg/bg-hero.jpg');
+        --bg-hero-options: top center no-repeat;
+        --bg-hero-size: contain;
+
+        --bg-logo-srvnui-url: url('images/svg/logos/srvnui-color-positive.svg');
+        --bg-logo-srvnui-options: left center no-repeat;
+        --bg-logo-srvnui-size: contain;
+
+        --bg-logo-benlar-url: url('images/svg/logos/benlar-grid-color-positive.svg');
+        --bg-logo-benlar-options: left center no-repeat;
+        --bg-logo-benlar-size: contain;
+
+        --bg-logo-cliente-url: url('images/svg/logos/bice-vida-color-positive.svg');
+        --bg-logo-cliente-options: left center no-repeat;
+        --bg-logo-cliente-size: contain;
+    }
+
+    /* Theme METLIFE */
+    .theme-metlife {
+
+        --color-primary: #0192d5;
+        --color-secondary: #0065a5;
+        --color-third: #a4ce4e;
+    
+        --color-primary-hover: var(--color-secondary);
+
+        --color-gradient-from: #FFFFFF;
+        --color-gradient-via: #E1E1E1;
+        --color-gradient-to: var(--color-third);
+
+        --bg-hero-image-url: url('images/jpg/bg-hero.jpg');
+        --bg-hero-options: top center no-repeat;
+        --bg-hero-size: contain;
+
+        --bg-logo-srvnui-url: url('images/svg/logos/srvnui-color-positive.svg');
+        --bg-logo-srvnui-options: left center no-repeat;
+        --bg-logo-srvnui-size: contain;
+
+        --bg-logo-benlar-url: url('images/svg/logos/benlar-grid-color-positive.svg');
+        --bg-logo-benlar-options: left center no-repeat;
+        --bg-logo-benlar-size: contain;
+
+        --bg-logo-cliente-url: url('images/svg/logos/metlife-color-positive.svg');
+        --bg-logo-cliente-options: left center no-repeat;
+        --bg-logo-cliente-size: contain;
+    }
+    
+    /* Theme SECURITY */
+    .theme-security {
+        --color-primary: #ED6E00;
+        --color-secondary: #2b0d61;
+        --color-third: #2b0d61;
+    
+        --color-primary-hover: var(--color-secondary);
+
+        --color-gradient-from: #FFFFFF;
+        --color-gradient-via: #E1E1E1;
+        --color-gradient-to: var(--color-third);
+
+        --bg-hero-image-url: url('images/jpg/bg-hero.jpg');
+        --bg-hero-options: top center no-repeat;
+        --bg-hero-size: contain;
+
+        --bg-logo-srvnui-url: url('images/svg/logos/srvnui-color-positive.svg');
+        --bg-logo-srvnui-options: left center no-repeat;
+        --bg-logo-srvnui-size: contain;
+
+        --bg-logo-benlar-url: url('images/svg/logos/benlar-grid-color-positive.svg');
+        --bg-logo-benlar-options: left center no-repeat;
+        --bg-logo-benlar-size: contain;
+
+        --bg-logo-cliente-url: url('images/svg/logos/vida-security-color-positive.svg');
+        --bg-logo-cliente-options: left center no-repeat;
+        --bg-logo-cliente-size: contain;
+    }
+
+    
+    
+
+    .bg-theme-gradient {
+        @apply bg-gradient-to-br from-[var(---color-gradient-from)] via-[var(--color-gradient-via)] to-[var(--color-gradient-to)];
+    }
+
+    .bg-hero {
+        background: var(--bg-hero-image-url) var(--bg-hero-options);
+        background-size: var(--bg-hero-size);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--color-secondary);
+    }
+
+    .bg-primary {
+        background-color: var(--color-primary);
+    }
+    .hover\:bg-primary-hover:hover {
+        background-color: var(--color-primary-hover);
+    }
+
+    /* IMAGES */
+    section#login {
+        /* Hero Image */
+        section#hero {
+            article {
+                header {
+                    /* Logo SRV-NUI */
+                    figure {
+                        background: var(--bg-logo-srvnui-url) var(--bg-logo-srvnui-options);
+                        background-size: var(--bg-logo-srvnui-size);
+                        display: block;
+                        height: 2.25rem;
+                    }
+                }
+                footer {
+                    figure {
+                        /* Logo BENLAR */
+                        background: var(--bg-logo-benlar-url) var(--bg-logo-benlar-options);
+                        background-size: var(--bg-logo-benlar-size);
+                        display: block;
+                        height: 3rem;
+                    }
+                }
+            }
+        }
+        /* Formulario */
+        section#access {
+            article {
+                header {
+                    figure {
+                        /* Logo CLIENTE */
+                        background: var(--bg-logo-cliente-url) var(--bg-logo-cliente-options);
+                        background-size: var(--bg-logo-cliente-size);
+                        display: block;
+                        height: 3.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Clases de Utilidad de Validación */
+    .input-error {
+        color: var(--validation-text-error);
+        border-color: var(--validation-color-error);
+        @apply focus:border-red-500 focus:ring-red-300;
+    }
+    .input-success {
+        color: var(--validation-text-success);
+        border-color: var(--validation-color-success);
+        @apply focus:border-green-500 focus:ring-green-300;
+    }
+    .input-warning {
+        color: var(--validation-text-warning);
+        border-color: var(--validation-color-warning);
+        @apply focus:border-yellow-500 focus:ring-yellow-300;
+    }
+    .input-info {
+        color: var(--validation-text-info);
+        border-color: var(--validation-color-info);
+        @apply focus:border-blue-500 focus:ring-blue-300;
+    }
+
+    .text-error-validation {
+        color: var(--validation-color-error);
+    }
+    .text-success-validation {
+        color: var(--validation-color-success);
+    }
+    .text-warning-validation {
+        color: var(--validation-color-warning);
+    }
+    .text-info-validation {
+        color: var(--validation-color-info);
+    }
+}
