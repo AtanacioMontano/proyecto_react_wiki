@@ -62,3 +62,6 @@ vite.config.js
 
 <a href="https://deepwiki.com/AtanacioMontano/proyecto_react_wiki"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 
+
+## Última actualización
+**Push realizado el**: 2025-06-04 04:11:34 UTC
