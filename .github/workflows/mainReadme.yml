@@ -25,6 +25,9 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
+        
+          git config --global user.email "amontano@benlar.cl"
+          git config --global user.name "AtanacioMontano"
           git add README.md
           git commit -m "📝 Actualizar README con fecha del último push"
           git push 
