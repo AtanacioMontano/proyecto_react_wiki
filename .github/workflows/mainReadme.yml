@@ -1,0 +1,32 @@
+name: Notify and Update README on Push
+
+on:
+  push:
+    branches: [ "main" ]  # Cambia según tu rama
+
+jobs:
+  notify-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Necesario para hacer push después
+
+      - name: Notify via Slack/Discord/Email
+        run: |
+          echo "📢 ¡Se hizo push a la rama ${{ github.ref }}!"
+
+      - name: Update README.md
+        run: |
+          # Añade la fecha del último push al README
+          echo -e "\n## Última actualización\n**Push realizado el**: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> README.md
+          cat README.md  # Opcional: Ver el contenido
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add README.md
+          git commit -m "📝 Actualizar README con fecha del último push"
+          git push
